@@ -1,0 +1,23 @@
+.desktop-navigation {
+  margin-left: 2.25rem;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 0.75rem;
+
+    a {
+      text-decoration: none;
+      color: var(--dark-grayish-blue);
+      transition: color var(--transition-time) ease-in;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--orange);
+      }
+    }
+
+    li {
+      padding: 0.375rem;
+    }
+  }
+}

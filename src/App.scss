@@ -1,0 +1,11 @@
+@media screen and (min-width: 766px) {
+  .mbl-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .dsk-only {
+    display: none;
+  }
+}

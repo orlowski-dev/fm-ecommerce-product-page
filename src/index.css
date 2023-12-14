@@ -9,6 +9,8 @@
   --dark-grayish-blue: rgb(104, 112, 125);
   --grayish-blue: rgb(182, 188, 200);
   --light-grayish-blue: rgb(247, 248, 253);
+
+  --transition-time: 0.1s;
 }
 
 * {
