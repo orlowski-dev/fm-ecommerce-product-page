@@ -1,0 +1,48 @@
+.product-section {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .content {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1.125rem;
+    h1 {
+      font-size: 1.875rem;
+    }
+    p {
+      color: var(--dark-grayish-blue);
+      line-height: 1.5rem;
+    }
+
+    .sale {
+      margin-top: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .price-on-sale {
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: black;
+
+        span {
+          font-size: 0.875rem;
+          display: inline-block;
+          padding: 0.125rem 0.3125rem;
+          background-color: var(--pale-orange);
+          border-radius: 0.3125rem;
+          color: var(--orange);
+        }
+      }
+
+      .reg-price {
+        text-decoration: line-through;
+        color: var(--grayish-blue);
+        font-weight: 700;
+      }
+    }
+  }
+}

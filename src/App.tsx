@@ -1,12 +1,14 @@
 import "./App.scss";
 import AppHeader from "./components/AppHeader";
+import ProductSection from "./components/ProductSection";
+import { default as product1 } from "./data/details.json";
 
 const App = () => {
   return (
     <>
       <AppHeader />
       <main>
-        <h1>Frontend Mentor | E-commerce product page</h1>
+        <ProductSection {...product1} />
       </main>
     </>
   );
