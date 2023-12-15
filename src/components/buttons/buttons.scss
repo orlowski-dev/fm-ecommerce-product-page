@@ -9,6 +9,11 @@
 .icon-button {
   padding: 0.5rem;
   border-radius: 0.3125rem;
+  height: 2rem;
+  width: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background-color: var(--light-grayish-blue);
   }
@@ -25,4 +30,17 @@
   height: 42px;
   justify-content: center;
   align-items: center;
+}
+
+.button-orange {
+  background-color: var(--orange);
+  padding: 1rem 1.25rem;
+  border-radius: 0.625rem;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 3px 10px 30px rgba(255, 125, 26, 0.4);
 }

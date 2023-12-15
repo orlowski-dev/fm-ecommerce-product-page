@@ -5,6 +5,7 @@
   "price": 250.0,
   "onSale": true,
   "saleValue": 0.5,
+  "inStock": 10,
   "images": [
     "/products/1/image-product-1.jpg",
     "/products/1/image-product-2.jpg",

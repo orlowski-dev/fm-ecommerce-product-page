@@ -6,10 +6,10 @@ export const IconButton = (
     description: string;
   }
 ) => {
-  const { children, description, ...rest } = props;
+  const { children, description, ...other } = props;
   return (
     <button
-      {...rest}
+      {...other}
       className="btn icon-button"
       aria-description={description}
     >
@@ -25,15 +25,25 @@ export const SliderButton = (
     description: string;
   }
 ) => {
-  const { children, description, ...rest } = props;
+  const { children, description, ...other } = props;
   return (
     <button
-      {...rest}
+      {...other}
       className="btn slider-button"
       aria-description={description}
     >
       <span className="vh">{description}</span>
       {children}
+    </button>
+  );
+};
+
+export const Button = (
+  props: React.HTMLAttributes<HTMLButtonElement> & { children: React.ReactNode }
+) => {
+  return (
+    <button {...props} className="btn button-orange">
+      {props.children}
     </button>
   );
 };

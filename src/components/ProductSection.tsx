@@ -1,3 +1,4 @@
+import AddToCartSection from "./AddToCartSection";
 import "./ProductSection.scss";
 import Slider from "./Slider";
 
@@ -7,6 +8,7 @@ interface Props {
   brand: string;
   price: number;
   onSale: boolean;
+  inStock: number;
   saleValue: number;
   images: string[];
   thumbnails: string[];
@@ -31,6 +33,7 @@ const ProductSection = (props: Props) => {
             <p className="reg-price">${props.price.toFixed(2)}</p>
           </div>
         )}
+        <AddToCartSection inStock={props.inStock} />
       </div>
     </section>
   );
