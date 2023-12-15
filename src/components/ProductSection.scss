@@ -14,6 +14,11 @@
       line-height: 1.5rem;
     }
 
+    .brand {
+      font-weight: 700;
+      color: var(--orange);
+    }
+
     .sale {
       margin-top: 0.75rem;
       display: flex;
@@ -31,7 +36,7 @@
         span {
           font-size: 0.875rem;
           display: inline-block;
-          padding: 0.125rem 0.3125rem;
+          padding: 0.0625rem 0.3125rem;
           background-color: var(--pale-orange);
           border-radius: 0.3125rem;
           color: var(--orange);
@@ -44,5 +49,15 @@
         font-weight: 700;
       }
     }
+  }
+}
+
+@media screen and (min-width: 766px) {
+  .product-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3.75rem;
+    gap: 3.75rem;
+    align-items: center;
   }
 }

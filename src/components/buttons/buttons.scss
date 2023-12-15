@@ -4,7 +4,6 @@
   display: inline-flex;
   border: none;
   background-color: white;
-  transition: background-color var(--transition-time) ease-in;
 }
 
 .icon-button {
@@ -17,4 +16,13 @@
     width: 16px;
     height: 16px;
   }
+}
+
+.slider-button {
+  background-color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
 }
