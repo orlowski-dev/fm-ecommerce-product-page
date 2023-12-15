@@ -1,3 +1,12 @@
+.vh {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  user-select: none;
+  opacity: 0;
+}
+
 @media screen and (min-width: 766px) {
   .mbl-only {
     display: none;

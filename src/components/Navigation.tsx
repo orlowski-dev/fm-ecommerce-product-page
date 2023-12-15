@@ -21,3 +21,17 @@ export const DesktopNavigation = () => {
     </nav>
   );
 };
+
+export const MobileNavigation = () => {
+  return (
+    <nav className="mbl-only mobile-navigation" id="mobile-nav">
+      <ul>
+        {links.map((link, index: number) => (
+          <a href={link.path} key={index}>
+            <li>{link.name}</li>
+          </a>
+        ))}
+      </ul>
+    </nav>
+  );
+};
