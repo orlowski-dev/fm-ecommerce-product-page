@@ -25,6 +25,20 @@
       transition: height var(--transition-time) ease-in;
     }
   }
+
+  .right-side {
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border: 2px solid transparent;
+      transition: border-color var(--transition-time) ease-in;
+      cursor: pointer;
+      border-radius: 50%;
+      &:hover {
+        border-color: var(--orange);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 766px) {

@@ -45,7 +45,7 @@ const AppHeader = () => {
           <img
             src="/assets/images/image-avatar.png"
             alt="avatar"
-            style={{ width: 36, height: 36 }}
+            className="avatar"
           />
         </IconButton>
       </div>

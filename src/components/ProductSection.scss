@@ -59,6 +59,10 @@
   form {
     display: grid;
     gap: 12px;
+
+    .button-orange {
+      box-shadow: 3px 10px 30px rgba(255, 125, 26, 0.4);
+    }
   }
 }
 

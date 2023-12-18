@@ -42,5 +42,8 @@
   font-weight: 700;
   color: white;
   font-size: 1rem;
-  box-shadow: 3px 10px 30px rgba(255, 125, 26, 0.4);
+  transition: opacity var(--transition-time) ease-in;
+  &:hover {
+    opacity: 0.5;
+  }
 }
