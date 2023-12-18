@@ -9,17 +9,17 @@ const AddToCartSection = ({
   inStock: number;
   callback: (qty: number) => void;
 }) => {
-  const QtyInpRef = useRef<HTMLInputElement>(null);
+  const qtyInputRef = useRef<HTMLInputElement>(null);
 
   const onFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    callback(Number(QtyInpRef.current!.value));
+    callback(Number(qtyInputRef.current!.value));
   };
 
   return (
     <div className="add-to-cart-section">
       <form onSubmit={onFormSubmit}>
-        <QtyInput inStock={inStock} ref={QtyInpRef} />
+        <QtyInput inStock={inStock} ref={qtyInputRef} />
         <Button>
           <img src="/assets/images/icon-cart-white.svg" alt="cart icon" />
           Add to cart

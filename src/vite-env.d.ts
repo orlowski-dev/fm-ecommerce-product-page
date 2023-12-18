@@ -17,7 +17,12 @@ interface ReducerStates {
   cart: { product: Product; qty: number }[] | null;
 }
 
-type ReducerActions = {
-  type: "addToCart";
-  payload: { product: Product; qty: number } | null;
-};
+type ReducerActions =
+  | {
+      type: "addToCart";
+      payload: { product: Product; qty: number } | null;
+    }
+  | {
+      type: "removeFromCart";
+      productID: number;
+    };
