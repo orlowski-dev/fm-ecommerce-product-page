@@ -1,58 +1,61 @@
-import { useCallback, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import AddToCartSection from "./AddToCartSection";
 import Lightbox from "./Lightbox";
 import "./ProductSection.scss";
 import Slider from "./Slider";
+import { CartContext } from "../contexts";
 
-interface Props {
-  name: string;
-  description: string;
-  brand: string;
-  price: number;
-  onSale: boolean;
-  inStock: number;
-  saleValue: number;
-  images: string[];
-  thumbnails: string[];
-}
-
-const ProductSection = (props: Props) => {
+const ProductSection = ({ product }: { product: Product }) => {
+  const cartContext = useContext(CartContext);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const closeLightboxCallback = useCallback(() => {
     setLightboxOpen(false);
   }, []);
 
+  const addToCartCallback = useCallback(
+    (qty: number) => {
+      cartContext?.setCart({ type: "addToCart", payload: { product, qty } });
+    },
+    [cartContext, product]
+  );
+
   return (
     <section className="product-section">
       <div className="images">
         <Slider
-          images={props.images}
-          thumbnails={props.thumbnails}
+          images={product.images}
+          thumbnails={product.thumbnails}
           onClick={() => setLightboxOpen(true)}
         />
         {lightboxOpen && (
           <Lightbox
-            images={props.images}
-            thumbnails={props.thumbnails}
+            images={product.images}
+            thumbnails={product.thumbnails}
             onClose={closeLightboxCallback}
           />
         )}
       </div>
       <div className="content">
-        <p className="brand">{props.brand}</p>
-        <h1>{props.name}</h1>
-        <p>{props.description}</p>
-        {props.onSale && (
+        <p className="brand">{product.brand}</p>
+        <h1>{product.name}</h1>
+        <p>{product.description}</p>
+        {product.onSale && (
           <div className="sale">
             <p className="price-on-sale">
-              ${Number(props.price - props.price * props.saleValue).toFixed(2)}
-              <span>{props.saleValue * 100}%</span>
+              $
+              {Number(
+                product.price - product.price * product.saleValue
+              ).toFixed(2)}
+              <span>{product.saleValue * 100}%</span>
             </p>
-            <p className="reg-price">${props.price.toFixed(2)}</p>
+            <p className="reg-price">${product.price.toFixed(2)}</p>
           </div>
         )}
-        <AddToCartSection inStock={props.inStock} />
+        <AddToCartSection
+          inStock={product.inStock}
+          callback={addToCartCallback}
+        />
       </div>
     </section>
   );
