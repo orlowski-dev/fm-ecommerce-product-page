@@ -12,7 +12,6 @@ const AppHeader = () => {
       <div className="left-side">
         <div className="mbl-only">
           <IconButton
-            aria-description="Open mobile menu button"
             aria-haspopup="true"
             aria-expanded="false"
             aria-controls="mobile-nav"
@@ -41,7 +40,7 @@ const AppHeader = () => {
       </div>
       <div className="right-side">
         <ShoppingCart />
-        <IconButton aria-description="Your profile" description="Your profile">
+        <IconButton description="Your profile">
           <img
             src="/assets/images/image-avatar.png"
             alt="avatar"

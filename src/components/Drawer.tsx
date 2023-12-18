@@ -88,7 +88,6 @@ const Drawer = ({ open, onClose, children }: DrawerProps) => {
       >
         <header>
           <IconButton
-            aria-description="Close menu"
             id="mobile-menu"
             description="Close menu"
             onClick={onClose}

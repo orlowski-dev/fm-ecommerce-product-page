@@ -13,9 +13,9 @@ export const DesktopNavigation = () => {
     <nav className="dsk-only desktop-navigation" id="desktop-nav">
       <ul>
         {links.map((link, index: number) => (
-          <a href={link.path} key={index}>
-            <li>{link.name}</li>
-          </a>
+          <li key={index}>
+            <a href={link.path}>{link.name}</a>
+          </li>
         ))}
       </ul>
     </nav>
@@ -27,9 +27,9 @@ export const MobileNavigation = () => {
     <nav className="mbl-only mobile-navigation" id="mobile-nav">
       <ul>
         {links.map((link, index: number) => (
-          <a href={link.path} key={index}>
-            <li>{link.name}</li>
-          </a>
+          <li key={index}>
+            <a href={link.path}>{link.name}</a>
+          </li>
         ))}
       </ul>
     </nav>

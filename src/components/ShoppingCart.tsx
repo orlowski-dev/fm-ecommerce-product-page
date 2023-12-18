@@ -45,7 +45,6 @@ const ShoppingCart = () => {
   return (
     <div className="shopping-cart">
       <IconButton
-        aria-description="Shopping cart"
         description="Shopping cart"
         onClick={() => setOpen((prev) => !prev)}
       >

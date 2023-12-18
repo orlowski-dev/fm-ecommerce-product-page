@@ -8,11 +8,7 @@ export const IconButton = (
 ) => {
   const { children, description, ...other } = props;
   return (
-    <button
-      {...other}
-      className="btn icon-button"
-      aria-description={description}
-    >
+    <button {...other} className="btn icon-button">
       <span className="vh">{description}</span>
       {children}
     </button>
@@ -27,11 +23,7 @@ export const SliderButton = (
 ) => {
   const { children, description, ...other } = props;
   return (
-    <button
-      {...other}
-      className="btn slider-button"
-      aria-description={description}
-    >
+    <button {...other} className="btn slider-button">
       <span className="vh">{description}</span>
       {children}
     </button>
