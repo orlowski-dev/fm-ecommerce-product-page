@@ -6,15 +6,16 @@ import { motion } from "framer-motion";
 interface Props {
   images: string[];
   thumbnails: string[];
+  onClick?: () => void;
 }
 
-const Slider = ({ images, thumbnails }: Props) => {
+const Slider = ({ images, thumbnails, onClick }: Props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const imagesContainerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div className="slider-component">
-      <div className="slider">
+      <div className="slider" onClick={onClick}>
         <motion.div
           className="images"
           ref={imagesContainerRef}

@@ -1,4 +1,6 @@
+import { useCallback, useState } from "react";
 import AddToCartSection from "./AddToCartSection";
+import Lightbox from "./Lightbox";
 import "./ProductSection.scss";
 import Slider from "./Slider";
 
@@ -15,10 +17,27 @@ interface Props {
 }
 
 const ProductSection = (props: Props) => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  const closeLightboxCallback = useCallback(() => {
+    setLightboxOpen(false);
+  }, []);
+
   return (
     <section className="product-section">
       <div className="images">
-        <Slider images={props.images} thumbnails={props.thumbnails} />
+        <Slider
+          images={props.images}
+          thumbnails={props.thumbnails}
+          onClick={() => setLightboxOpen(true)}
+        />
+        {lightboxOpen && (
+          <Lightbox
+            images={props.images}
+            thumbnails={props.thumbnails}
+            onClose={closeLightboxCallback}
+          />
+        )}
       </div>
       <div className="content">
         <p className="brand">{props.brand}</p>

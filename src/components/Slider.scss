@@ -6,6 +6,7 @@
   .slider {
     max-width: 100%;
     overflow: hidden;
+    cursor: pointer;
     .images {
       display: flex;
     }
@@ -40,13 +41,19 @@
       gap: 0.875rem;
 
       img {
+        cursor: pointer;
         border: 2px solid transparent;
         transition: border-color var(--transition-time) ease-in,
           filter var(--transition-time) ease-in;
+        position: relative;
 
         &.selected {
-          filter: opacity(0.5);
           border-color: var(--orange);
+          filter: brightness(120%);
+        }
+
+        &:hover {
+          filter: brightness(120%);
         }
       }
     }
