@@ -5,6 +5,7 @@ import ProductSection from "./components/ProductSection";
 import { default as products } from "./data/products.json";
 import { CartContext } from "./contexts";
 import { reducer } from "./reducer";
+import Footer from "./components/Footer";
 
 const App = () => {
   const product = products[0];
@@ -18,6 +19,7 @@ const App = () => {
       <main>
         <ProductSection product={product} />
       </main>
+      <Footer />
     </CartContext.Provider>
   );
 };

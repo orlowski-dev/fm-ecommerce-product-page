@@ -1,0 +1,14 @@
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--light-grayish-blue);
+  display: grid;
+  gap: 0.75rem;
+
+  a {
+    color: var(--orange);
+    font-weight: bold;
+  }
+}

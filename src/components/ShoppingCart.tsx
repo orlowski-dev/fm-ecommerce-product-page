@@ -42,7 +42,6 @@ const ShoppingCart = () => {
   const cartContext = useContext(CartContext);
   const productsInCart = countProductsInCart(cartContext?.cart);
   const [open, setOpen] = useState(false);
-  console.log(cartContext?.cart);
   return (
     <div className="shopping-cart">
       <IconButton

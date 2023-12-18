@@ -17,6 +17,18 @@
     &:last-child {
       border-radius: 0 7px 7px 0;
     }
+
+    svg {
+      width: 18px;
+      height: auto;
+      transition: opacity var(--transition-time) ease-in;
+    }
+
+    &:hover {
+      svg {
+        opacity: 0.5;
+      }
+    }
   }
 
   input {

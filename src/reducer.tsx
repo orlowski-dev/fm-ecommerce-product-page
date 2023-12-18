@@ -24,7 +24,6 @@ export const reducer = (
           ({ product }) => product.id === action.payload?.product.id
         );
         const tmp = states.cart;
-        console.log(states.cart[index].qty, action.payload.qty);
         tmp[index] = {
           product: states.cart[index].product,
           qty: states.cart[index].qty + action.payload.qty,
